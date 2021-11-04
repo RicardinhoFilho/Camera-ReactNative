@@ -34,7 +34,7 @@ export default function App() {
 
   async function takePickture() {
     if (camRef) {
-      const data = await camRef.current.takePictureAsync();
+      const data = await camRef.current.takePictureAsync({base64:true});
       console.log(data);
       setPhoto(data.uri);
       setOpen(true);
